@@ -12,7 +12,7 @@ This repository automates the deployment of a scalable data pipeline on Kubernet
 ## Getting Started
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/data-pipeline-k8s.git
+   git clone https://github.com/kardesyazilim/data-pipeline-k8s.git
    cd data-pipeline-k8s
    ```
 
