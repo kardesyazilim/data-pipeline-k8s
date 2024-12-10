@@ -1,0 +1,15 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: spark-data-job
+spec:
+  schedule: "0 * * * *"  # Runs every hour
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: spark-job
+            image: bitnami/spark:3.3.0
+            args: ["/opt/spark/bin/run_spark.sh", "--job", "data-processing"]
+          restartPolicy: OnFailure
